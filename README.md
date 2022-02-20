@@ -89,10 +89,19 @@ Training a model to detect cars and persons in an image.
 
 ## Output on the Validation Set from the [output Images folder](https://github.com/keshavgarg139/car-person-detection/tree/main/predictions)
 * The format on the bounding boxes is (label, confidence)
-* The IoU threshold was set as 0.5 as the model was trained for a very small amount of time.
-![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/predictions/val_batch0_labels.jpg)
-![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/predictions/val_batch0_pred.jpg)
-![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/predictions/val_batch1_labels.jpg)
-![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/predictions/val_batch1_pred.jpg)
-![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/predictions/val_batch2_labels.jpg)
-![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/predictions/val_batch2_pred.jpg)
+* The IoU threshold was set as 0.5 as the model was trained for a very small amount of time, and mAP of 74.5% was achieved.
+<table border="0">
+ <tr>
+    <td>
+![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/predictions/val_batch0_labels.jpg)</td>
+    <td>![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/predictions/val_batch0_pred.jpg)</td>
+ </tr>
+ <tr>
+    <td>![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/predictions/val_batch1_labels.jpg)</td>
+    <td>![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/predictions/val_batch1_pred.jpg)</td>
+ </tr>
+ <tr>
+    <td>![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/predictions/val_batch2_labels.jpg)</td>
+    <td>![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/predictions/val_batch2_pred.jpg)</td>
+ </tr>  
+</table>
