@@ -79,29 +79,20 @@ Training a model to detect cars and persons in an image.
 ## Observations
 * Since the free version of colab has limited threshold for inactivity as well as limited compute time, the model trained for ***10 epochs***. As expected, the performance deteriorates on unseen intersections, but the quality of the detection remains excellent to the human eye, as shown below for the small model. With the ***IoU threshold of 0.5*** the model achieved an **mAP:75%** The model did draw very nice bounding boxes, but for higher IoU thresholds, mAP as well as the clasification precision can be improved.
 * False positives can definitely be improved with further training.
-* In the last epoch trained, this is the status obtained on the ***training set***.<br />
-
-**{'Loss/classification_loss': 0.100076556,<br />
- 'Loss/localization_loss': 0.05904458,<br />
- 'Loss/regularization_loss': 0.12084896,<br />
- 'Loss/total_loss': 0.2799701,<br />
- 'learning_rate': 0.018827396}**
+* In the last epoch trained, this is the status obtained on the ***VALIDATION SET***.<br />
+![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/outputs/Validation%20Set%20Performance.jpeg)
 
 --------------------------------------------------------------------------------------------
 
 * Report obtained from evaluation on ***test*** dataset <br />
 ![Eval](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/eval.png)
 
-## Output on the Test Set from the [output Images folder](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/tree/master/outputImages)
+## Output on the Validation Set from the [output Images folder](https://github.com/keshavgarg139/car-person-detection/tree/main/predictions)
 * The format on the bounding boxes is (label, confidence)
-* The threshold was set as 0.15 as the model was trained for a very small amount of time.
-![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/0.jpg)
-![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/1.jpg)
-![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/2.jpg)
-![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/3.jpg)
-![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/4.jpg)
-![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/5.jpg)
-![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/6.jpg)
-![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/7.jpg)
-![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/8.jpg)
-![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/9.jpg)
+* The IoU threshold was set as 0.5 as the model was trained for a very small amount of time.
+![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/predictions/val_batch0_labels.jpg)
+![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/predictions/val_batch0_pred.jpg)
+![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/predictions/val_batch1_labels.jpg)
+![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/predictions/val_batch1_pred.jpg)
+![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/predictions/val_batch2_labels.jpg)
+![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/predictions/val_batch2_pred.jpg)
