@@ -93,7 +93,7 @@ Training a model to detect cars and persons in an image.
 <table border="0">
  <tr>
     <td>
-![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/predictions/val_batch0_labels.jpg)</td>
+<img src="https://github.com/keshavgarg139/car-person-detection/blob/main/predictions/val_batch0_labels.jpg"></td>
     <td>![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/predictions/val_batch0_pred.jpg)</td>
  </tr>
  <tr>
