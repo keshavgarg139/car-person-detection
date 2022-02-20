@@ -1,4 +1,4 @@
-# car-person-detection Object Detection
+# car-person Object Detection
 
 Training a model to detect cars and persons in an image. 
 
@@ -59,7 +59,7 @@ Training a model to detect cars and persons in an image.
 ## Training
 * A YOLOv5l model pretrained on COCO128 was used to apply transfer learning, by specifying the custom dataset, batch-size, image size. (Weights can be randomly initialized --weights '' --cfg yolov5s.yaml). Pretrained weights are auto-downloaded from the latest YOLOv5 release.
 
-* Please refer to the [Colab Training Jupyter Notebook](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/Hiring_Challenge_EagleView_2.ipynb)
+* Please refer to the [Colab Training Jupyter Notebook](https://colab.research.google.com/drive/12Q8PYt3pTlNpQwrxM82K5btkOgsXiDwJ?usp=sharing)
 * Ultralytics YOLOv5 public repo was cloned and all the dependencies were set up.
 * A **.yaml** corresponding the configurations of our custom dataset, was created and placed inside yolov5/data directory.
 * ***python3 train.py --img 640 --batch 16 --epochs 10 --data car-person.yaml --weights yolov5l.pt*** command was run, to train the YOLOv5l model, for 10 epochs on our dataset.
@@ -68,24 +68,22 @@ Training a model to detect cars and persons in an image.
 --------------------------------------------------------------------------------------------
 
 ## Inference Code
-* Please refer to the [main.py](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/main.py) as the main inference script. 
-* The config.py file has the paths to the saved model and label map to be used in the main file.
-* The folder [utils](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/tree/master/utils) has two files [helpers.py](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/utils/Helpers.py) and [detector_num.py](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/utils/detector_num.py)
-* Those two files are the helper files which are used in the main code for generating
-  detections, drawing bounding boxes and stuff.
-
 --------------------------------------------------------------------------------------------
+
+* After training following is the report obtained from evaluation on ***VALIDATION SET***.
+![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/outputs/Validation%20Set%20Performance.jpeg)
+--------------------------------------------------------------------------------------------
+
 
 ## Observations
 * Since the free version of colab has limited threshold for inactivity as well as limited compute time, the model trained for ***10 epochs***. As expected, the performance deteriorates on unseen intersections, but the quality of the detection remains excellent to the human eye, as shown below for the small model. With the ***IoU threshold of 0.5*** the model achieved an **mAP:75%** The model did draw very nice bounding boxes, but for higher IoU thresholds, mAP as well as the clasification precision can be improved.
 * False positives can definitely be improved with further training.
-* In the last epoch trained, this is the status obtained on the ***VALIDATION SET***.<br />
-![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/outputs/Validation%20Set%20Performance.jpeg)
+* The follwoing image represents the image status is the status obtained on the <br />
+![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/evals/PR_curve.png)
+![Im1](https://github.com/keshavgarg139/car-person-detection/blob/main/evals/results.png)
+
 
 --------------------------------------------------------------------------------------------
-
-* Report obtained from evaluation on ***test*** dataset <br />
-![Eval](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/eval.png)
 
 ## Output on the Validation Set from the [output Images folder](https://github.com/keshavgarg139/car-person-detection/tree/main/predictions)
 * The format on the bounding boxes is (label, confidence)
